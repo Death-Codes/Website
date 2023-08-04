@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QuPrint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('Background.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      font-family: "Domine", serif;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px;
+      font-size: 3rem;
+    }
+
+    li {
+      list-style-type: none;
+      display: inline;
+      margin: 10px 20px;
+      font-family: "domine", sans-serif;
+    }
+
+    ul a {
+      text-decoration: none;
+      color: #666;
+      transition-duration: 0.3s;
+    }
+
+    ul a:hover {
+      color: #00cc99;
+    }
+
+    nav {
+      text-align: center;
+      border-bottom: dotted #999 1px;
+    }
+
+    footer {
+      background-color: #333;
+      line-height: 40px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 12px;
+      font-family: "Questrial", sans-serif;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .welcome-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .welcome-text {
+      font-size: 2rem;
+    }
+
+    .shop-button {
+      text-decoration: none;
+      color: #333;
+      background-color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition-duration: 0.3s;
+      margin-top: 10px;
+    }
+
+    .shop-button:hover {
+      background-color: #00cc99;
+    }
+
+    main {
+      text-align: center;
+      font-family: "Questrial", sans-serif;
+      margin: 20px auto;
+      padding: 10px;
+      color: #ffffff;
+    }
+
+    main h2 {
+      font-weight: 100;
+      margin: 10px auto;
+    }
+
+    main p {
+      color: #ffffff;
+    }
+
+    main div {
+      margin: 25px 0;
+      max-width: 100%;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+      transition-duration: 0.3s;
+    }
+
+    img:hover {
+      border: 10px #f0505000 solid;
+      box-sizing: border-box;
+    }
+
+    .scroll-down-arrow {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid #fff;
+      cursor: pointer;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    
+    .welcome-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .welcome-text {
+      font-size: 3vw;
+    }
+
+    @media only screen and (min-width: 601px) {
+      .welcome-text {
+        font-size: 3rem;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <div class="welcome-container">
+    <div class="welcome-text">
+      <h1>Welcome to QuPrint</h1>
+    </div>
+
+    <a class="scroll-down-arrow" href="javascript:void(0);" onclick="scrollToStore()"></a>
+  </div>
+
+  <main id="store">
+    <div>
+      <img src="Product/Audi_V2.png">
+      <img src="Product/Micro_Qube_V2.png">
+      <img src="Product/Honey_Cone_V2.png">
+      <img src="Product/Batman_V2.jpg">
+      <img src="Product/Ford_V2.png">
+      <img src="Product/Honda_V2.png">
+      <img src="Product/AA_Storage_V2.png">
+      <img src="Product/Usb_Cleaner.png">
+      <img src="Product/Handle_V2.png">
+      <img src="Product/Toothpaste_Squeezer_v2.png">
+      <img src="Product/Emergency_Whistle_V2.png">
+      <img src="Product/Spoon_Holder_V2.png">
+    </div>
+    <a class="shop-button" href="#" title="This link will return you to the top">More products</a>
+  </main>
+
+  <footer>
+    <p>© 2023 QuPrint. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToStore() {
+      const storeSection = document.getElementById("store");
+      storeSection.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
